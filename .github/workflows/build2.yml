@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          - aarch64_cortex-a53
+        
           - x86_64
 
     steps:
@@ -27,7 +27,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-openwrt-22.03
           FEEDNAME: packages_ci
-          PACKAGES: luci-app-bypass luci-app-passwall luci-app-passwall2 luci-app-ssr-plus
+          PACKAGES: luci-app-vssr
           NO_REFRESH_CHECK: true
 
       - name: Upload artifacts
